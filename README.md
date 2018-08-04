@@ -5,8 +5,8 @@ This project is used to calculate water hardness for water softener sizing. It u
 To get started you will need to download water quality samples from the USGS.gov website. This can be added to a database or a .csv file. In this sample we use a .csv file, with the columns used zipcode and calcium carbonate PPM. 
 
 ### Prerequisites
-python 3
-pandas
+ - python 3
+ - pandas
 
 ### Contributing
 If you would like to contribute to the project, have a question, and or would like to make a suggestion please feel free to send me a message or email me at andrex.lee@gmail.com
