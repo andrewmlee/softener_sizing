@@ -22,19 +22,23 @@ def get_location():
     return zip_code
 
 # If the user has a sample we ask for it here, if not we get the hardness from our data
-if sample.lower() == 'yes':
-    hardness = int(input('What is your hardness amount? '))
-    iron = int(input('what are your iron results? '))	
-else:
-    hardness = get_location()
+
+
+def hardness_amount():
+    if sample.lower() == 'yes':
+        hardness = int(input('What is your hardness amount? '))
+        return hardness
+    else:
+        hardness = get_location()
+        return hardness
     
 # We calculate the size of softener needed based on hard
 def city_calc():
-    hardness_calc = (75 * num_people * hardness)
+    hardness_calc = (75 * num_people * hardness_amount())
     return hardness_calc
 
 def well_calc():
-    comp_hardness = hardness * 3
+    comp_hardness = hardness_amount() * 3
     hardness_calc = (75 * num_people * comp_hardness) 
     return hardness_calc
 
