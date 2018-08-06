@@ -2,8 +2,7 @@ import pandas as pd
 
 
 # Loads water quality data
-data = pd.read_csv('./hardness.csv')
-data.set_index('zipcode', inplace = True)
+
 
 
 water_type = str(input('What type of water do you have, city or well? '))
@@ -13,6 +12,8 @@ fixtures = str(input('Do you have any high flow fixtures? '))
 
 # returns the water hardness for the user/'s zipcode
 def get_location():
+    data = pd.read_csv('./hardness.csv')
+    data.set_index('zipcode', inplace = True)
     location = input('What is you zip code?: ')
     
     while (int(location) <= 10000) or (int(location) >= 99999):
