@@ -42,6 +42,7 @@ def well_calc():
     hardness_calc = (75 * num_people * comp_hardness) 
     return hardness_calc
 
+# This calculates the size of softener needed
 def hardness_calc():
     if water_type.lower() == 'city':
         hardness = city_calc()
