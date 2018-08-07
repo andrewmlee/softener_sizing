@@ -5,7 +5,6 @@ import pandas as pd
 
 
 
-water_type = str(input('What type of water do you have, city or well? '))
 sample = str(input('Do you have a water sample? yes or no '))
 num_people = int(input('How many people live in your home? '))
 fixtures = str(input('Do you have any high flow fixtures? '))
@@ -45,6 +44,8 @@ def well_calc():
 
 # This calculates the size of softener needed
 def hardness_calc():
+    water_type = str(input('What type of water do you have, city or well? '))
+
     if water_type.lower() == 'city':
         hardness = city_calc()
         return hardness  
