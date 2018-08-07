@@ -1,17 +1,12 @@
 import pandas as pd
 
 
-# Loads water quality data
-
-
-
-sample = str(input('Do you have a water sample? yes or no '))
 num_people = int(input('How many people live in your home? '))
 fixtures = str(input('Do you have any high flow fixtures? '))
 
 # returns the water hardness for the user/'s zipcode
 def get_location():
-    data = pd.read_csv('./hardness.csv')
+    data = pd.read_csv('./hardness.csv') # Loads water quality data
     data.set_index('zipcode', inplace = True)
     location = input('What is you zip code?: ')
     
@@ -25,6 +20,7 @@ def get_location():
 
 
 def hardness_amount():
+    sample = str(input('Do you have a water sample? yes or no '))
     if sample.lower() == 'yes':
         hardness = int(input('What is your hardness amount? '))
         return hardness
