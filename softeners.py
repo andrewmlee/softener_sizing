@@ -52,5 +52,6 @@ def hardness_calc():
     elif water_type.lower() == 'well':
         hardness = well_calc()
         return hardness
+    else: water_type = str(input('Please make sure to enter either city or well:  '))
 
 print(hardness_calc())
