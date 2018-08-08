@@ -1,8 +1,10 @@
 import pandas as pd
 
+# returns whether or not the user has high flow fixtures in their home
+def def high_flow():
+    fixtures = str(input('Do you have any high flow fixtures? '))
+    return fixtures
 
-
-fixtures = str(input('Do you have any high flow fixtures? '))
 # returns the number of people that live in the home
 def num_people():
     people = int(input('How many people live in your home? '))
