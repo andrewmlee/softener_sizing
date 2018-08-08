@@ -1,8 +1,12 @@
 import pandas as pd
 
 
-num_people = int(input('How many people live in your home? '))
+
 fixtures = str(input('Do you have any high flow fixtures? '))
+# returns the number of people that live in the home
+def num_people():
+    people = int(input('How many people live in your home? '))
+    return people
 
 # returns the water hardness for the user/'s zipcode
 def get_location():
@@ -30,12 +34,12 @@ def hardness_amount():
     
 # We calculate the size of softener needed based on hard
 def city_calc():
-    hardness_calc = (75 * num_people * hardness_amount())
+    hardness_calc = (75 * num_people() * hardness_amount())
     return hardness_calc
 
 def well_calc():
     comp_hardness = hardness_amount() * 3
-    hardness_calc = (75 * num_people * comp_hardness) 
+    hardness_calc = (75 * num_people() * comp_hardness) 
     return hardness_calc
 
 # This calculates the size of softener needed
