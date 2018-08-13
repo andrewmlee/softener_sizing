@@ -19,13 +19,13 @@ def num_people():
 # returns the water hardness for the user/'s zipcode
 def get_location():
     data = pd.read_csv('./hardness.csv') # Loads water quality data
-    data.set_index('zipcode', inplace = True)
-    location = input('What is you zip code?: ')
+    data.set_index('zipcode', inplace = True) #Sets the zipcode column as the index
+    location = input('What is you zip code?: ') 
     
     while (int(location) <= 10000) or (int(location) >= 99999):
         location = input('Please inter a valid zipcode: ')
     
-    zip_code = data.loc[int(location)]
+    zip_code = data.loc[int(location)] #looks up the zipcode in the csv file
     return zip_code
 
 # If the user has a sample we ask for it here, if not we get the hardness from our data
@@ -60,6 +60,7 @@ def hardness_calc():
     elif water_type.lower() == 'well':
         hardness = well_calc()
         return hardness
-    else: water_type = str(input('Please make sure to enter either city or well:  '))
-
+    else: 
+        water_type = str(input('Please make sure to enter either city or well:  '))
+        
 print(hardness_calc())
