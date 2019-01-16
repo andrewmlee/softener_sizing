@@ -13,7 +13,7 @@ If you would like to contribute to the project, have a question, and or would li
 
 ### Authors
 
-* **Andy Lee** - *Research Consultant - Curationz* - Initial Work https://github.com/andrewmlee
+* **Andy Lee** - Initial Work https://github.com/andrewmlee
 
 ## License
 This project is under the GNU General Public License v3 for more info view the here: https://github.com/andrewmlee/softener_sizing/blob/master/LICENSE or for more information about the GNU GPL v3 visit: https://www.gnu.org/licenses/gpl-3.0.en.html
